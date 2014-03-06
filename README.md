@@ -7,7 +7,7 @@ Install node.js
 Install yeoman
 
 ```
-npm install -g yo generator-angular
+npm install -g yo generator-angular grunt-cli bower
 ```
 
 # Step 1
@@ -16,5 +16,13 @@ Generate angular basis
 
 ```
 yo angular
+npm install grunt
 ```
+
+Start Server
+
+```
+grunt server
+```
+
 
