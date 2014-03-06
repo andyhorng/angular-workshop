@@ -1,27 +1,30 @@
 <section class="PaymentInfo">
-  
+
   <h3>
     <div class="fa fa-caret-right">
     </div>
     選擇付款方式
   </h3>
-  <select>
+
+  <h1>{{payment}}</h1>
+
+  <select ng-model="payment">
     <option value="CARD">
       信用卡
     </option>
     <option value="ATM">
-      ATM 轉帳付款 
+      ATM 轉帳付款
     </option>
     <option value="CASH">
       現金付款（限自取）
     </option>
     <option value="ALLPAY">
-      歐付寶 
+      歐付寶
     </option>
   </select>
-  
+
   <article class="CARD payment_method">
-    
+
     <hgroup class="CARD now">
       <a href="#" data-type="card" class="Cards now">
         <div class="fa fa-credit-card">
@@ -36,9 +39,9 @@
         5% 紅利回饋
       </a>
     </hgroup>
-    
+
     <hgroup class="info credit_card_promotion card_promotion_card" style="display: block;">
-      <hgroup>
+      <hgroup ng-show="payment=='CARD'">
         <p>
           您已選擇
           <em>
@@ -61,51 +64,10 @@
           6.各商品禮券發行人資訊可至商品資訊頁的餐券介紹裡查閱。
         </p>
       </hgroup>
-      
-      
-      
-      <hgroup>
-        <p>
-          您已選擇
-          <em>
-            美國通運白金卡 5% 紅利回饋
-          </em>
-          方式付款。
-          <br>
-          <span>
-            *
-          </span>
-          此優惠
-          <a id="member_login" style="cursor: pointer;">
-            <span>
-              請登入 EZTABLE 會員
-            </span>
-          </a>
-          ，累積紅利
-          刷美國運通
-          <span>
-            白金卡
-          </span>
-          以上，依實際消費金額回饋5%EZTABLE紅利點數。
-        </p>
-      </hgroup>
-      
-      <hgroup>
-        <p>
-          <em>
-            美國運通卡活動說明：
-          </em>
-          1. 本優惠限活動期間(2014/01/01~2014/12/31)刷美國運通信用卡白金卡以上。
-      2. 本優惠不得與其它優惠併用，如此筆訂購已使用其它優惠方式折抵，將不會再領取紅利點數。
-      3. 持卡人於 EZTABLE網站以本行信用卡消費可立即獲得5%EZTABLE紅利點數回饋。紅利點數將立即入帳至EZTABLE個人會員專區。紅利點數有效期限為12個月，逾期自動失效。
-      4. 每卡每月回饋最高上限為NT$2,000(即40,000EZTABLE紅利點數)。
-      5. 本優惠所取得之紅利點數限於 EZTABLE網站折抵使用，每次消費最多可抵扣上限為消費金額之50%，亦不得與其他優惠並用，且不得要求折抵現金或退款。
-      6. 已領取本活動點數者，如於符合獲贈資格2個月內辦理退貨，本行有權要求其返還其所領取之點數。
-      7. 本優惠之相關活動辦法、未盡事項或變更，以EZTABLE網站或美國運通網站公告為準。
-      </p>
-      </hgroup>
-      
-      <hgroup>
+
+
+
+      <hgroup ng-show="payment=='ATM'">
         <p>
           您已選擇
           <em>
@@ -141,23 +103,10 @@
           請填入您的帳號末五碼
           <input name="pay_account" maxlength="5" type="text" placeholder="範例：12345">
         </p>
-        
+
       </hgroup>
-      
-      <hgroup class="info credit_card_promotion card_promotion_ae" style="display: block;">
-        
-        <p>
-        </p>
-        
-      </hgroup>
-      
-      
-      <hgroup class="info credit_card_promotion card_promotion_ae">
-        <article class="ATM payment_method">
-        </article>
-      </hgroup>
-      
-      <hgroup class="info credit_card_promotion card_promotion_ae">
+
+      <hgroup class="info credit_card_promotion card_promotion_ae" style="display: block;" ng-show="payment=='CASH'">
         <article class="CASH payment_method">
           <p>
             您已選擇
@@ -172,30 +121,11 @@
             </em>
           </p>
         </article>
-        <article style="display: none;" class="ALLPAY payment_method">
-          <p>
-            您已選擇
-            <em>
-              歐付寶
-            </em>
-            方式付款。（限歐付寶會員）
-            <br>
-            加入歐付寶會員支付好處多：
-            <br>
-            1.信託履約帳戶-消費絕對有保障。
-            <br>
-            2.交易/帳務查詢-商品明細隨時查。
-            <br>
-            3.多種支付方式：信用卡/ATM/Web ATM/超商繳費。
-            <br>
-            4.本商品禮券，已與歐付寶財金資訊股份有限公司等相互連帶擔保，持本禮券可依面額向上列公司購買等值之商品。上列公司不得為任何異議或差別待遇，亦不得要求任何費用或補償。
-          </p>
-        </article>
       </hgroup>
-      
+
     </hgroup>
-    
+
     <div class="clearFix">
     </div>
 </section>
-    
+
