@@ -7,6 +7,14 @@ Install node.js
 Install yeoman
 
 ```
-npm install -g yeoman generator-angular
+npm install -g yo generator-angular
+```
+
+# Step 1
+
+Generate angular basis
+
+```
+yo angular
 ```
 
