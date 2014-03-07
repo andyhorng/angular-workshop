@@ -7,22 +7,5 @@ angular.module('angularWorkshopApp')
       'AngularJS'
       'Karma'
     ]
-  .controller 'CheckoutCtrl', ($scope) ->
-    $scope.payment_options = [
-      {
-        value: 'CARD'
-        name: '信用卡'
-      }
-      {
-        value: 'ATM'
-        name: 'ATM 轉帳付款'
-      }
-      {
-        value: 'CASH'
-        name: '現金付款（限自取）'
-      }
-      {
-        value: 'ALLPAY'
-        name: '歐付寶'
-      }
-    ]
+  .controller 'CheckoutCtrl', ($scope, PaymentOptions) ->
+    $scope.payment_options = PaymentOptions
