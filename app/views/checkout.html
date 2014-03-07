@@ -8,10 +8,7 @@
 
   <h1>{{payment}}</h1>
 
-  <select ng-model="payment" >
-    <option ng-repeat="i in payment_options" value="{{i.value}}">
-      {{i.name}}
-    </option>
+  <select ng-model="payment" ng-options="option.value as option.name for option in payment_options">
   </select>
 
   <article class="CARD payment_method">
