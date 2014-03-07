@@ -9,3 +9,9 @@ angular.module('angularWorkshopApp')
     ]
   .controller 'CheckoutCtrl', ($scope, PaymentOptions) ->
     $scope.payment_options = PaymentOptions
+
+    $scope.process = (payment) ->
+      $scope.clicked = true if payment is 'CARD'
+
+
+
