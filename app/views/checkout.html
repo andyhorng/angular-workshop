@@ -17,7 +17,7 @@
   <article class="CARD payment_method">
 
     <hgroup class="CARD now">
-      <a href="#" data-type="card" class="Cards now">
+      <a class="Cards now" ng-click="clicked=true">
         <div class="fa fa-credit-card">
         </div>
         一般信用卡
@@ -31,7 +31,7 @@
       </a>
     </hgroup>
 
-    <hgroup class="info credit_card_promotion card_promotion_card" style="display: block;">
+    <hgroup ng-class="{info: clicked, credit_card_promotion: clicked, card_promotion_card: clicked}" style="display: block;">
       <hgroup ng-show="payment=='CARD'">
         <p>
           您已選擇
