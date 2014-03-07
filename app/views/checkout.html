@@ -1,4 +1,4 @@
-<section class="PaymentInfo">
+<section class="PaymentInfo" ng-controller="CheckoutCtrl">
 
   <h3>
     <div class="fa fa-caret-right">
@@ -8,18 +8,9 @@
 
   <h1>{{payment}}</h1>
 
-  <select ng-model="payment">
-    <option value="CARD">
-      信用卡
-    </option>
-    <option value="ATM">
-      ATM 轉帳付款
-    </option>
-    <option value="CASH">
-      現金付款（限自取）
-    </option>
-    <option value="ALLPAY">
-      歐付寶
+  <select ng-model="payment" >
+    <option ng-repeat="i in payment_options" value="{{i.value}}">
+      {{i.name}}
     </option>
   </select>
 

@@ -13,5 +13,6 @@ angular.module('angularWorkshopApp', [
         controller: 'MainCtrl'
       .when '/checkout',
         templateUrl: 'views/checkout.html'
+        controller: 'CheckoutCtrl'
       .otherwise
         redirectTo: '/'
