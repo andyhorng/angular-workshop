@@ -8,7 +8,9 @@
 
   <h1>{{payment}}</h1>
 
-  <select ng-model="payment" ng-options="option.value as option.name for option in payment_options">
+  <input type="checkbox" ng-init="toggle=true" ng-model="toggle">
+
+  <select ng-model="payment" ng-options="option.value as option.name for option in (payment_options|ourpayment:toggle)">
   </select>
 
   <article class="CARD payment_method">
