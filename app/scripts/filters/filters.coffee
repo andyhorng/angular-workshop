@@ -5,7 +5,6 @@ angular.module('angularWorkshopApp')
   (payments, toggle) ->
     result = []
     for payment in payments
-      console.log payment
       if toggle is payment.isOurs
         result.push payment
 
